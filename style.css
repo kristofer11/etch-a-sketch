@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,25 +9,45 @@ body {
 }
 
 h1 {
-    color: purple;
+    color: grey;
     font-size: 72px;
+    background-color: lightgray;
+    border-radius: 8px;
+    padding: 0 44px;
 }
 
 div.container {
-    color: blue;
+    color: rgb(0, 0, 240);
     height: 960px;
     width: 960px;
-    border: 1px solid rgb(66, 66, 85);
+    border: 5px solid rgb(19, 19, 102);
     background: gray;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
 }
 
 .cell {
     /* height: 44px;
     width: 44px; */
-    /* background-color: turquoise; */
+    /* background-color: turquoise;
     box-sizing: border-box;
-    /* border: 1px solid white; */
+    border: 1px solid white; */
+}
+
+button {
+    margin: 10px;
+    background-color: rgb(114, 109, 109);
+    width: 111px;
+    height: 33px;
+    border-radius: 6px;
+    color: goldenrod
+}
+
+input {
+    height: 25px;
+    width: 99px;
+    font-size: 19px;
 }
