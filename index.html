@@ -11,7 +11,7 @@
     <h1>Sketch Pad</h1>
 
     <div>
-        <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+        <input type="number" placeholder="Size of Board" value="16" onchange="changeSize(this.value)" max="100"/>
         <button>Set Size</button>
     </div>
     
@@ -23,7 +23,11 @@
         // const userInput = changeSize();
 
         function changeSize(input) {
-            createGrid(input);
+            if(input <2 || input > 100){
+                alert('Please choose a number between 2 and 100!');
+            } else {
+                createGrid(input);
+            }   
         }
 
         //Make sketch board, change cell color "on-hover".
@@ -41,9 +45,8 @@
                 containerDiv.appendChild(cell);
             }
         }
-
-        createGrid(55);
     
+        createGrid(16);
 
     </script>
 </body>
