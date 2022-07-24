@@ -6,9 +6,9 @@ body {
 
 div.container {
     color: blue;
-    height: 704px;
-    width: 704px;
-    border: 1px solid blue;
+    height: 750px;
+    width: 750px;
+    border: 1px solid rgb(66, 66, 85);
     background: gray;
     display: flex;
     flex-wrap: wrap;
@@ -16,8 +16,8 @@ div.container {
 }
 
 .cell {
-    height: 44px;
-    width: 44px;
+    /* height: 44px;
+    width: 44px; */
     /* background-color: turquoise; */
     box-sizing: border-box;
     /* border: 1px solid white; */

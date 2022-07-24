@@ -4,29 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sketch Pad</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Sketch Pad</h1>
+
+    <div>
+        <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+        <button>Set Size</button>
+    </div>
+    
     <div id="container" class="container">
     </div>
 
     <script>
         const containerDiv = document.getElementById('container');
+        // const userInput = changeSize();
+
+        function changeSize(input) {
+            createGrid(input);
+        }
 
         //Make sketch board, change cell color "on-hover".
-        function createGrid() {
-                for (let i = 0; i < 256; i++){
+        //It took FOREVER to figure out how to change the cell height dependent on the size parameter.
+        function createGrid(size) {
+                let squares = containerDiv.querySelectorAll('div');
+                squares.forEach((div) => div.remove());
+                for (let i = 0; i < (size * size); i++){
                 let cell = document.createElement('div');  
-                cell.addEventListener('mouseover', () => cell.style.backgroundColor = 'black');                  
+                cell.addEventListener('mouseover', () => cell.style.backgroundColor = 'black');
                 cell.classList.add('cell');
-                cell.style.backgroundColor = "lightgray";
+                cell.style.backgroundColor = "white";
+                cell.style.height = `${750/size}px`;
+                cell.style.width = `${750/size}px`;
                 containerDiv.appendChild(cell);
             }
         }
 
-        createGrid();
+        createGrid(55);
+    
 
     </script>
 </body>
