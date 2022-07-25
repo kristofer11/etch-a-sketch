@@ -11,13 +11,19 @@
     <h1>Sketch Pad</h1>
 
     <div>
-        <input type="number" placeholder="Size of Board" value="16" onchange="changeSize(this.value)" max="100"/>
+        <input type="number" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
         <button>Set Size</button>
     </div>
     
     <div id="container" class="container">
     </div>
 
+    <!-- Next on the to-do list: make these buttons change the cell color or, ideally, make it so the user can choose ANY color. -->
+    <div class="color-button-div">
+        <button id="black-button" onclick="colorChange('black')">Switch to Black</button>
+        <button id="red-button" onclick="colorChange('red')">Switch to Red</button>
+        <button id="blue-button" onclick="colorChange('blue')">Switch to Blue</button>
+    </div>
     <script>
         const containerDiv = document.getElementById('container');
         // const userInput = changeSize();
@@ -45,7 +51,7 @@
                 containerDiv.appendChild(cell);
             }
         }
-    
+
         createGrid(16);
 
     </script>
